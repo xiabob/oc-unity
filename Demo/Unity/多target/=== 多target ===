@@ -1,0 +1,16 @@
+=== 多target ===
+
+基本同单target
+
+******** 但是首先先设置好你要融合unity工程的target *********
+
+1，设置好XcodePostBuild.cs中XcodeProjectRoot，XcodeTargetName，XcodeProjectName中参数
+2，将demo中的unity文件夹拷贝到上面设置的目录下（注意target）
+3，修改unity.xcconfig
+4，将target配置文件设置为unity.xcconfig文件
+5，两个脚本(注意顺序)
+6，运行将拷贝过来的classes，libraries文件添加到工程的unity目录下（如果第一步正确设置了，就不需要这一步了。否则需要手动操作，注意target）
+7，如果工程中有了pch文件，将Prefix.pch合并到对应的pch中（GCC_PREFIX_HEADER）
+
+可能的问题：
+1，将mismatched return type 修改为yes
