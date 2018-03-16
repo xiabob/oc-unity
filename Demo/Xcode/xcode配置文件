@@ -1,0 +1,35 @@
+1，xcworkspace与xcodeproj的区别
+
+xcodeproj是指xcode工程（project）文件（配置信息）
+
+xcworkspace是指xcode的工作空间（配置信息）
+它可以包含多个不同的工程文件，比如内部实际的内容是下面这样的
+
+<Workspace
+   version = "1.0">
+   <FileRef
+      location = "group:DCGameV3.xcodeproj">
+   </FileRef>
+   <FileRef
+      location = "group:Pods/Pods.xcodeproj">
+   </FileRef>
+</Workspace>
+
+
+xcode中更重要的是target，一个project可以包含多个target，它只是对target的描述，最重要的还是target的。
+
+资料：
+1，http://blog.csdn.net/chenyufeng1991/article/details/46994053
+2，https://www.jianshu.com/p/b6c59d8ed2c9
+3，https://stackoverflow.com/questions/21631313/xcode-project-vs-xcode-workspace-differences
+
+
+2，xcconfig文件
+
+工程配置文件，会覆盖对应的building setting中的值
+
+资料：
+https://pewpewthespells.com/blog/xcconfig_guide.html#GeneralInformation
+http://www.cnblogs.com/Jenaral/p/5661572.html
+https://www.jianshu.com/p/9a6f3019d81f
+https://www.jianshu.com/p/9b8bc8351223
