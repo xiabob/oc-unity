@@ -4,7 +4,7 @@
 
 ******** 但是首先先设置好你要融合unity工程的target *********
 
-1，设置好XcodePostBuild.cs中XcodeProjectRoot，XcodeTargetName，XcodeProjectName中参数
+1，将XcodePostBuild放置Editor目录下，并设置好XcodePostBuild.cs中XcodeProjectRoot，XcodeTargetName，XcodeProjectName中参数
 2，将demo中的unity文件夹拷贝到上面设置的目录下（注意target）
 3，修改unity.xcconfig
 4，将target配置文件设置为unity.xcconfig文件
